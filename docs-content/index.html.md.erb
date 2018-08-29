@@ -61,15 +61,15 @@ The following table provides version and version-support information about PRODU
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>v1.11.x, v1.12.x, v2.0.x and v2.1</td> **MIKI VERIFY**
+        <td>v2.1 and v2.2</td> **DEPENDS ON XENIAL SUPPORT - SHOULD ASK MARINA WHAT TO WRITE. CURRENTLY XENIAL SUPPORTED ON 2.2, PVTL PLANS TO BACKPORT TO 2.1**
     </tr>
     <tr>
         <td>Compatible Pivotal Application Service (formerly known as Elastic Runtime) version(s)</td>
-        <td>v1.11.x, v1.12.x, v2.0.x and v2.1</td> **MIKI VERIFY**
+        <td>v2.1 and v2.2</td> **IRRELEVANT. WE DONT'S USE PAS, SO IM PUTTING SAME AS ABOVE**
     </tr>
     <tr>
         <td>IaaS support</td>
-        <td>AWS, Azure, GCP, OpenStack, and vSphere</td> **MIKI VERIFY**
+        <td>AWS, Azure, GCP, OpenStack, and vSphere</td> **DEPENDS ON TESTS, BUT SHOULD BE ALL**
     </tr>
     <tr>
         <td>IPsec support?</td>
@@ -82,7 +82,8 @@ The following table provides version and version-support information about PRODU
 Snyk for PCF has the following requirements:
 
 + A paid Snyk Enterprise account. Learn more about [Snyk plans](https://snyk.io/plans).
-+ MIKI: Add other reqs here like xenial etc....
++ `ubuntu-xenial/97` stemcell **WHICH VERSION SHOULD WE CHOOSE? 97 IS ARBITRARY**
++ Ability to privision a VM with resources specs of at least: 8GB ram, 80GB disk, 2 cpu
 
 ## <a id="limitations"></a>Limitations
 

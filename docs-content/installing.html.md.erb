@@ -34,13 +34,13 @@ For example, if the domain for the Snyk web interface is `snyk.example.com` the 
 
 1. For **SSL Private Key**, enter the private key (in PEM format) for the full-chain certificate for the domain of the Snyk web interface.
 
-1. For **Bundle decryption password**, enter the **Bundle Decryption Password** as given to by a Snyk sales representative.
+1. For **Bundle decryption password**, enter the **Bundle Decryption Password** as provided to you by a Snyk sales representative.
 
-1. For **license**, enter the base64 enconding of the license file, as given to by a Snyk sales representative.
+1. For **license**, enter the base64 enconding of the license file, as provided to you by a Snyk sales representative.
 <p class="note"><strong>Note</strong>: Given a <strong>license.rli</strong> license key file, you can generate the base64 encoding of it by running `base64 -w0 license.rli` on linux or `base64 license.rli` on Mac OS X.</p>
 ![Screenshot of license in base64 encoding](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/license_-_blurred-bordered.png)
 
-1. (Optional) For **Additional Settings**, put a JSON of pre-configured config settings as given you by a Snyk representative.
+1. (Optional) For **Additional Settings**, enter a JSON of config settings as provided to you by a Snyk representative.
 ![Screenshot of Additional Settings field](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/additional_settings-bordered.png)
 
 1. Click **Save**.
@@ -57,11 +57,11 @@ For example, if the domain for the Snyk web interface is `snyk.example.com` the 
 
 1. Update the Snyk web interface domain to point to the noted ip address.
 
-1. Allow network access to the Snyk server on tcp ports `:30443` (Snyk web interface and API) and `:8800` (Snyk server settings console).
+1. Allow network access to the Snyk server on tcp ports `:30443` (Snyk web interface and API) and `:8800` (Snyk server management console).
 
 ##<a id='post-install-config'></a> (Optional) Step 3: Post-Install Snyk server Configuration
 
-1. Go to the url of the Snyk server management console on port `30443`.
+1. Go to the url of the Snyk server management console on port `8800`.
 For example, if the Snyk web interface domain is `snyk.example.com`, go to `https://snyk.example.com:8800`.
 Login using the password for the Snyk web interface that you have set during install.
 ![Snyk server management console authentication page](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/settigns_console-bordered.png)

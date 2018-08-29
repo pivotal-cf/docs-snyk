@@ -17,10 +17,10 @@ enables developers to find, fix, prevent and continuously monitor for known vuln
 Snyk for PCF is a full on-prem installation of the Snyk solution. Installing it conveniently sets up the Snyk solution
 with minimal configuration and human interaction.
 Snyk for PCF includes access to the entire suite of Snyk solutions, including Snyk source code management (SCM) integrations
-with Github Enterprise, Bitbucket Server and Gitlab; Snyk CLI; Snyk APIs; Snyk Cloud Foundry integration; Snyk Lambda integrationi; Snyk Jira integration and more.
+with Github Enterprise, Bitbucket Server and Gitlab; Snyk CLI; Snyk APIs; Snyk Cloud Foundry integration; Snyk Lambda integration; Snyk Jira integration and more.
 
-In addition, installing Snyk for PCF enables customers leveraging Snyk's integration with PCF buildpacks via the Snyk Service Broker
-to have the Snyk Service Broker connect to Snyk for PCF instead of the default Snyk SaaS service (https://snyk.io)
+In addition, customers leveraging the Snyk Service Broker to invoke Snyk scans on `cf push` via the various buildpacks, will be able to point the Service Broker to this on-prem installation
+instead of the default Snyk SaaS service (https://snyk.io)
 
 ## <a id='features'></a>Key Features
 
@@ -42,7 +42,7 @@ Snyk for PCF includes the following key features:
 
 ## <a id="snapshot"></a>Product Snapshot
 
-The following table provides version and version-support information about PRODUCT-NAME.
+The following table provides version and version-support information about Snyk for PCF.
 
 <table class="nice">
     <th>Element</th>
@@ -61,15 +61,15 @@ The following table provides version and version-support information about PRODU
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>v2.1 and v2.2</td> **DEPENDS ON XENIAL SUPPORT - SHOULD ASK MARINA WHAT TO WRITE. CURRENTLY XENIAL SUPPORTED ON 2.2, PVTL PLANS TO BACKPORT TO 2.1**
+        <td>v2.1 and v2.2</td>
     </tr>
     <tr>
         <td>Compatible Pivotal Application Service (formerly known as Elastic Runtime) version(s)</td>
-        <td>v2.1 and v2.2</td> **IRRELEVANT. WE DONT'S USE PAS, SO IM PUTTING SAME AS ABOVE**
+        <td>v2.1 and v2.2</td>
     </tr>
     <tr>
         <td>IaaS support</td>
-        <td>AWS, Azure, GCP, OpenStack, and vSphere</td> **DEPENDS ON TESTS, BUT SHOULD BE ALL**
+        <td>AWS, Azure, GCP, OpenStack, and vSphere</td>
     </tr>
     <tr>
         <td>IPsec support?</td>
@@ -82,8 +82,8 @@ The following table provides version and version-support information about PRODU
 Snyk for PCF has the following requirements:
 
 + A paid Snyk Enterprise account. Learn more about [Snyk plans](https://snyk.io/plans).
-+ `ubuntu-xenial/97` stemcell **WHICH VERSION SHOULD WE CHOOSE? 97 IS ARBITRARY**
-+ Ability to privision a VM with resources specs of at least: 8GB ram, 80GB disk, 2 cpu
++ `ubuntu-xenial` stemcell
++ Ability to provision a VM with resource specs of at least: 8GB ram, 80GB disk, 2 cpus
 
 ## <a id="limitations"></a>Limitations
 

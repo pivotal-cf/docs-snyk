@@ -1,30 +1,72 @@
 ---
-title: Installing and Configuring YOUR-PRODUCT-NAME
+title: Installing and Configuring Snyk for PCF
 owner: Partners
 ---
 
-This topic describes how to install and configure YOUR-PRODUCT-NAME.
+This topic describes how to install and configure Snyk for PCF.
 
-##<a id='install'></a> Install and Configure YOUR-PRODUCT-NAME
+##<a id='install'></a> Step 1: Install and Configure Snyk for PCF
 
-To install the YOUR-PRODUCT-NAME file on the Ops Manager Installation Dashboard, do the following:
+To install the Snyk for PCF tile on the Ops Manager Installation Dashboard, do the following:
 
-1. Download the product file from Pivotal Network.
+1. If you have not obtained yet a trial or production license key, please contact a [Snyk sales representative](mailto:sales@snyk.io)
 
-1. Navigate to the Ops Manager Installation Dashboard and click **Import a Product** to upload the product file. 
+1. Download the product tile from Pivotal Network.
 
-1. Under the **Import a Product** button, click **+** next to the version number of YOUR-PRODUCT-NAME. 
+1. Navigate to the Ops Manager Installation Dashboard and click **Import a Product** to upload the product tile. 
+
+1. Under the **Import a Product** button, click **+** next to the version number of Snyk for PCF. 
 This adds the tile to your staging area.
 
-1. Click the newly added **YOUR-PRODUCT-NAME** tile.
+1. Click the newly added **Snyk for PCF** tile.
 
-1. **This portion of the procedure should tell the users how to configure the newly added tile by
-walking them through the sections. Which fields should they fill out? What are the different
-checkboxes? Include relevant screenshots here.** 
+1. Click **Managed Service**.
+![Screenshot of Managed Service Page](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/Managed_Service_-_blurred-bordered.png)
+
+1. For **Hostname for Snyk API**, enter the domain that you will use for the Snyk web interface.
+For example, it may be `snyk.example.com`.
+
+1. For **Setting UI password**, enter a password for securing the management console of the Snyk server.
+
+1. For **SSL Certificate**, enter the full-chain certificate (in PEM format) for the domain of the Snyk web interface.
+For example, if the domain for the Snyk web interface is `snyk.example.com` the certificate should either match `snyk.example.com` or `*.example.com`.
+![Screenshot of certificate and Private key](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/certificate_and_private_key_-_blurred-bordered.png)
+
+1. For **SSL Private Key**, enter the private key (in PEM format) for the full-chain certificate for the domain of the Snyk web interface.
+
+1. For **Bundle decryption password**, enter the **Bundle Decryption Password** as provided to you by a Snyk sales representative.
+
+1. For **license**, enter the base64 enconding of the license file, as provided to you by a Snyk sales representative.
+<p class="note"><strong>Note</strong>: Given a <strong>license.rli</strong> license key file, you can generate the base64 encoding of it by running `base64 -w0 license.rli` on linux or `base64 license.rli` on Mac OS X.</p>
+![Screenshot of license in base64 encoding](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/license_-_blurred-bordered.png)
+
+1. (Optional) For **Additional Settings**, enter a JSON of config settings as provided to you by a Snyk representative.
+![Screenshot of Additional Settings field](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/additional_settings-bordered.png)
 
 1. Click **Save**.
 
-1. Return to the Ops Manager Installation Dashboard and click **Apply changes** to install YOUR-PRODUCT-NAME tile.
+1. Return to the Ops Manager Installation Dashboard and click **Apply changes** to install Snyk for PCF tile.
 
-**If needed, include additional configuration information below. For example, maybe there are
-configuration options not required for installation but which could be useful for certain users.**
+##<a id='post-install-env-setup'></a> Step 2: Post-Install Environment Configuration
+1. Once the tile finishes installing, click on the tile.
+
+1. Click **Status**.
+
+1. Note the ip address under **IPS**. This is the Snyk server address.
+![Screenshot of tile Status page](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/status_ip_address-bordered.png)
+
+1. Update the Snyk web interface domain to point to the noted ip address.
+
+1. Allow network access to the Snyk server on tcp ports `:30443` (Snyk web interface and API) and `:8800` (Snyk server management console).
+
+##<a id='post-install-config'></a> (Optional) Step 3: Post-Install Snyk server Configuration
+
+1. Go to the url of the Snyk server management console on port `8800`.
+For example, if the Snyk web interface domain is `snyk.example.com`, go to `https://snyk.example.com:8800`.
+Login using the password for the Snyk web interface that you have set during install.
+![Snyk server management console authentication page](https://res.cloudinary.com/snyk/image/upload/v1535536854/docs-pivotal/settigns_console-bordered.png)
+
+1. Click **Settings**. 
+![Snyk server management console](https://res.cloudinary.com/snyk/image/upload/v1535538822/docs-pivotal/console_settings-bordered.png)
+
+1. Change any settings as per your requirements. Contact a Snyk representative for support and guidance.

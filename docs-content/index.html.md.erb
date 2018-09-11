@@ -3,26 +3,20 @@ title: Snyk for PCF (Beta)
 owner: Partners
 ---
 
-<p class="note warning">
-<strong>WARNING! </strong>
-Snyk for PCF tile is currently in Beta and is intended for evaluation and test purposes only. 
-Do not use this product in a PCF production environment.
-</p>
+<p class="note warning"><strong>WARNING:</strong> Snyk for PCF tile is currently in Beta and is intended for evaluation and test purposes only. Do not use this product in a PCF production environment.</p>
 
-This documentation describes Snyk for Pivotal Cloud Foundry (PCF). Snyk for PCF 
-enables developers to find, fix, prevent, and continuously monitor for known vulnerabilities and license issues in their open source dependencies.
+This documentation describes Snyk for Pivotal Cloud Foundry (PCF). Snyk for PCF enables developers to find, fix, prevent, and continuously monitor for known vulnerabilities and license issues in their open source dependencies.
 
-## <a id='overview'></a>Overview
 
-Snyk for PCF is a full on-prem installation of the Snyk solution. Installing it conveniently sets up the Snyk solution
-with minimal configuration and human interaction.
-Snyk for PCF includes access to the entire suite of Snyk solutions, including Snyk source code management (SCM) integrations
-with Github Enterprise, Bitbucket Server, and Gitlab; Snyk CLI; Snyk APIs; Snyk Cloud Foundry integration; Snyk Lambda integration; Snyk Jira integration, and more.
+## <a id='overview'></a> Overview
 
-In addition, customers leveraging the Snyk Service Broker to invoke Snyk scans on `cf push` via the various buildpacks, will be able to point the Service Broker to this on-prem installation
-instead of the default Snyk SaaS service (https://snyk.io)
+Snyk for PCF is a full on-premise installation of the Snyk solution. Installing it conveniently sets up the Snyk solution
+with minimal configuration and human interaction. Snyk for PCF includes access to the entire suite of Snyk solutions, including Snyk source code management (SCM) integrations with Github Enterprise, Bitbucket Server, and Gitlab; Snyk CLI; Snyk APIs; Snyk Cloud Foundry integration; Snyk Lambda integration; Snyk Jira integration, and more.
 
-## <a id='features'></a>Key Features
+In addition, customers leveraging the Snyk Service Broker to invoke Snyk scans on `cf push` via the various buildpacks will be able to point the Service Broker to this on-premise installation instead of the default [Snyk SaaS servic](https://snyk.io).
+
+
+## <a id='features'></a> Key Features
 
 Snyk for PCF includes the following key features:
 
@@ -39,8 +33,9 @@ Snyk for PCF includes the following key features:
 * **API:** Integrate Snyk scans into your CI/CD pipeline with ease. Extract all data to augment your existing dashboards
 
 
+## <a id="snapshot"></a> Product Snapshot
 
-## <a id="snapshot"></a>Product Snapshot
+<p class='note'><strong>Note:</strong> As of PCF v2.0, Elastic Runtime is renamed Pivotal Application Service (PAS).</p> 
 
 The following table provides version and version-support information about Snyk for PCF.
 
@@ -76,27 +71,27 @@ The following table provides version and version-support information about Snyk 
         <td>No</td>
     </tr>
 </table>
-* As of PCF v2.0, <em>Elastic Runtime</em> is renamed <em>Pivotal Application Service (PAS)</em>. 
 
-## <a id="reqs"></a>Requirements
+
+## <a id="reqs"></a> Requirements
+
 Snyk for PCF has the following requirements:
 
 + A paid Snyk Enterprise account. Learn more about [Snyk plans](https://snyk.io/plans).
 + `ubuntu-xenial` stemcell
-+ Ability to provision a VM with resource specs of at least: 8GB ram, 80GB disk, 2 cpus
-
-## <a id="limitations"></a>Limitations
-
-None
-
-## <a id="feedback"></a>Feedback
-
-If you have a feature request, questions, or information about a bug, please email
-[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to [Snyk Support](mailto:support@snyk.io).
-
-## <a id='license'></a>License
-
-Customers interested in using Snyk for PCF can download the tile and install it with a trial license. 
-To obtain a trial or production license and 24/7 support, please contact a [Snyk sales representative](mailto:sales@snyk.io).
++ Ability to provision a VM with resource specs of at least: 8&nbsp;GB RAM, 80&nbsp;GB disk, 2 CPUs
 
 
+## <a id="limitations"></a> Limitations
+
+None.
+
+
+## <a id="feedback"></a> Feedback
+
+If you have a feature request, questions, or information about a bug, email [Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to [Snyk Support](mailto:support@snyk.io).
+
+
+## <a id='license'></a> License
+
+Customers interested in using Snyk for PCF can download the tile and install it with a trial license. To obtain a trial or production license and 24/7 support, contact a [Snyk sales representative](mailto:sales@snyk.io).
